@@ -21,10 +21,7 @@ export class PostController {
   }
 
   @Get(':id')
-  async getPost(
-    @Param('id')
-    id: string,
-  ): Promise<Book> {
+  async getPost(@Param('id') id: string): Promise<Book> {
     return this.postService.getSinglePost(id);
   }
 
